@@ -1,0 +1,47 @@
+# Byte-compiled / compiled Python files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+env/
+
+# IDE-specific files and directories
+.vscode/
+.idea/
+
+# Editor backup files
+*~
+*.swp
+
+# Logs and log-related files
+*.log
+log/
+logs/
+
+# Compiled binary files
+*.pyc
+*.pyo
+*.dll
+*.so
+*.dylib
+
+# Local development configuration
+config.py
+
+# Database files
+*.db
+*.sqlite
+
+# Environment configuration file
+.env
+
+# Automatically generated files and directories
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+db.sqlite
