@@ -32,7 +32,22 @@ OPEN_AI_API = '...'
 COHERE_API = '...'
 ```
 
-5. Run the server
+5. RoboMaster set-up
+
+```
+Go to https://github.com/dji-sdk/robomaster-sdk
+Download the repo and run the executable file named “VisualCppRedist_AIO_20200707.exe”.
+
+Important! Please keep the executable running in the background while using the RoboMaster.
+
+Go to the (physical) RoboMaster. Turn on the robot by pressing and holding the power button. 
+Once the RoboMaster is online, ensure the connection method is in “direct connection mode”. 
+Lastly, connect to the Robot through WiFi connection. 
+
+The Wifi name is: “RMEP-21abe4” and the password is “12341234”
+```
+
+6. Run the server
 
 ```
 flask run
