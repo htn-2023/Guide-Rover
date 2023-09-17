@@ -45,3 +45,5 @@ dist/
 build/
 *.egg
 db.sqlite
+
+config.py
