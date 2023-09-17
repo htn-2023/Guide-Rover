@@ -24,18 +24,19 @@ source venv/bin/activate
 bash setup.sh
 ```
 
-4. Enter your OpenAI/Cohere API key in `.env`
+4. Enter your OpenAI/Cohere API key in `communication/config-sample.py` and rename it to `config.py`
 
 ```
-# .env
+# config.py
 OPEN_AI_API = '...'
-COHERE_API = '...'
 ```
 
-5. Run the server
+5. Run the communication models
 
 ```
-flask run
+python3 communication/recorder.py
+python3 communication/transcriber.py
+python3 communication/decision.py
 ```
 
 # Usage
