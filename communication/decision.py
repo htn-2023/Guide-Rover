@@ -2,8 +2,7 @@ import config as config, json
 
 # import and configure OpenAI
 import openai
-openai.api_key = config.OPENAI_API_KEY
-
+import cohere
 # import and configure asyncio and Interactive Brokers ib_insync package
 import asyncio
 import nest_asyncio
@@ -35,17 +34,24 @@ async def check_transcript():
             """
 
             print(prompt)
-
-            engine = 'gpt-4'
-
-            response = openai.ChatCompletion.create(
-                model=engine,
-                messages=[
-                    {"role": "system", "content": "You are a helpful assistant."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0.2,
-                frequency_penalty=0.0
+            path = 'gpt'
+            if path == 'gpt':
+                openai.api_key = config.OPENAI_API_KEY
+                engine = 'gpt-4'
+                response = openai.ChatCompletion.create(
+                    model=engine,
+                    messages=[
+                        {"role": "system", "content": "You are a helpful assistant."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=0.2,
+                    frequency_penalty=0.0
+                )
+            elif path == 'cohere':
+                co = cohere.Client('kAbNlTv4YeZHafQ2ynhWeKYcpAkWbBoZC94vqT4E')
+                response = co.chat(
+                prompt,
+                temperature=0.8,
             )
             try:
                 print('-----------------------------------')
