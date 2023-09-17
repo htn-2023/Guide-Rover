@@ -56,20 +56,13 @@ async def check_transcript():
             try:
                 print('-----------------------------------')
                 print(response['choices'][0]['message']['content'].strip())
+                global response_dict
                 response_dict = json.loads(response['choices'][0]['message']['content'].strip())
+                print(response_dict)
                 print('-----------------------------------')
             except Exception as e:
                 print(f"error parsing response from OpenAI {e}")
                 return
-
-            # company = response_dict['company']
-            # if company in config.SYMBOLS:
-            #     # symbol = config.SYMBOLS[company]
-            #     # contract = Stock(symbol, 'SMART', 'USD')
-            #     # ib.qualifyContracts(contract)
-            #     # order = MarketOrder(response_dict['action'], response_dict['quantity'])
-            #     # ib.placeOrder(contract, order)
-            #     print(f"Placed order for {response_dict['quantity']} shares of {company}")
 
 async def run_periodically(interval, periodic_function):
     while True:

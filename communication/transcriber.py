@@ -1,7 +1,8 @@
 import config as config
 import whisper
 import os, glob
-
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 # find most recent files in a directory
 recordings_dir = os.path.join('communication/recordings', '*')
 

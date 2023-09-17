@@ -46,4 +46,9 @@ build/
 *.egg
 db.sqlite
 
+# config
 config.py
+
+# video
+RoboMaster/output.avi
+communication/recordings/
