@@ -3,7 +3,7 @@ COHERE_API_KEY = ""
 
 TRANSCRIPT_FILE = "communication/transcriptions/transcript.txt"
 
-COMMAND_WORD = "siri"
+COMMAND_WORD = "curry"
 
 PROMPT_INSTRUCTIONS = "You are trying to direct a blind man to walk. " \
     "Return the status of the decision below. " \
