@@ -48,7 +48,7 @@ async def check_transcript():
                     frequency_penalty=0.0
                 )
             elif path == 'cohere':
-                co = cohere.Client('kAbNlTv4YeZHafQ2ynhWeKYcpAkWbBoZC94vqT4E')
+                co = cohere.Client('COHERE API KEY')
                 response = co.chat(
                 prompt,
                 temperature=0.8,
